@@ -1,0 +1,76 @@
+root@vps717606:~/TrinityCore/build# make
+[  4%] Built target g3dlib
+[  4%] Built target Detour
+[  5%] Built target Recast
+[  5%] Built target fmt
+[  8%] Built target jemalloc
+[  8%] Built target gsoap
+[  9%] Built target argon2
+[ 10%] Built target mpq
+[ 10%] Built target revision_data.h
+[ 10%] Building CXX object src/common/CMakeFiles/common.dir/Encoding/Base32.cpp.o
+In file included from /root/TrinityCore/src/common/Encoding/Base32.cpp:19:
+In file included from /root/TrinityCore/src/common/Encoding/BaseEncoding.h:21:
+/root/TrinityCore/src/common/Utilities/advstd.h:116:20: fatal error: recursive
+      template instantiation exceeded maximum depth of 256
+            return gcd(n, m);
+                   ^
+/root/TrinityCore/src/common/Utilities/advstd.h:116:20: note: in instantiation
+      of function template specialization 'advstd::gcd<unsigned long, unsigned
+      int>' requested here
+/root/TrinityCore/src/common/Utilities/advstd.h:126:19: note: in instantiation
+      of function template specialization 'advstd::gcd<unsigned int, unsigned
+      long>' requested here
+        return (m/gcd(m, n))*n;
+                  ^
+/root/TrinityCore/src/common/Utilities/advstd.h:116:20: note: in instantiation
+      of function template specialization 'advstd::gcd<unsigned long, unsigned
+      int>' requested here
+            return gcd(n, m);
+                   ^
+/root/TrinityCore/src/common/Utilities/advstd.h:126:19: note: in instantiation
+      of function template specialization 'advstd::gcd<unsigned int, unsigned
+      long>' requested here
+        return (m/gcd(m, n))*n;
+                  ^
+/root/TrinityCore/src/common/Utilities/advstd.h:116:20: note: in instantiation
+      of function template specialization 'advstd::gcd<unsigned long, unsigned
+      int>' requested here
+            return gcd(n, m);
+                   ^
+/root/TrinityCore/src/common/Utilities/advstd.h:126:19: note: (skipping 247
+      contexts in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+        return (m/gcd(m, n))*n;
+                  ^
+/root/TrinityCore/src/common/Utilities/advstd.h:116:20: note: in instantiation
+      of function template specialization 'advstd::gcd<unsigned long, unsigned
+      int>' requested here
+            return gcd(n, m);
+                   ^
+/root/TrinityCore/src/common/Utilities/advstd.h:126:19: note: in instantiation
+      of function template specialization 'advstd::gcd<unsigned int, unsigned
+      long>' requested here
+        return (m/gcd(m, n))*n;
+                  ^
+/root/TrinityCore/src/common/Utilities/advstd.h:116:20: note: in instantiation
+      of function template specialization 'advstd::gcd<unsigned long, unsigned
+      int>' requested here
+            return gcd(n, m);
+                   ^
+/root/TrinityCore/src/common/Utilities/advstd.h:126:19: note: in instantiation
+      of function template specialization 'advstd::gcd<unsigned int, unsigned
+      long>' requested here
+        return (m/gcd(m, n))*n;
+                  ^
+/root/TrinityCore/src/common/Encoding/BaseEncoding.h:35:51: note: in
+      instantiation of function template specialization 'advstd::lcm<unsigned
+      int, unsigned long>' requested here
+    static constexpr std::size_t PAD_TO = advstd::lcm(8u, BITS_PER_CHAR);
+                                                  ^
+1 error generated.
+src/common/CMakeFiles/common.dir/build.make:727: recipe for target 'src/common/CMakeFiles/common.dir/Encoding/Base32.cpp.o' failed
+make[2]: *** [src/common/CMakeFiles/common.dir/Encoding/Base32.cpp.o] Error 1
+CMakeFiles/Makefile2:956: recipe for target 'src/common/CMakeFiles/common.dir/all' failed
+make[1]: *** [src/common/CMakeFiles/common.dir/all] Error 2
+Makefile:127: recipe for target 'all' failed
+make: *** [all] Error 2
